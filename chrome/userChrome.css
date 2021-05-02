@@ -149,7 +149,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 /*Vizualización correcta del porcentaje de zoom mostrado en la urlbar*/
 #urlbar-zoom-button {padding: 0px 2px !important;}
 
-/*Vizualización correcta del porcentaje de zoom mostrado en la urlbar*/
+/*Linea gradiente*/
 .tab-background {	position: relative !important;}
 .tab-background::after { width: 96% !important;margin-block:-5px !important; background: var(--panel-separator-zap-gradient);  position: absolute;
 	content: '';	height: 1px;	left: 0;		right: 6;	top: 0;  margin-top: -1px !important;  margin-left: 2px !important;	transform: scale(0, 1);
