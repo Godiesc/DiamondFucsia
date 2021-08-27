@@ -1,7 +1,7 @@
 :root{
   --lwt-accent-color: #0a0a0f !important;                        /*"frame": "#17161c" */
   --lwt-text-color: #999999 !important;                          /*"tab_background_text": "#c3c3c3"*/
-  --arrowpanel-background: #1a1320fa !important;                 /*"popup": "#1c1b22Fa"*/
+  --arrowpanel-background: #1a1320fD !important;                 /*"popup": "#1c1b22Fa"*/
   --arrowpanel-color: #e5e5e6 !important;                        /*"popup_text": "#dfdfdf"*/
   --arrowpanel-border-color: #443351 !important;                 /*"popup_border": "#304f60"*/
   --lwt-popup-brighttext-url-color: #ccb3ff !important;          /*"color de label: El sitio no funciona?"*/
@@ -16,7 +16,7 @@
   --lwt-toolbar-field-highlight: #b20156 !important;             /*"toolbar_field_highlight": "#006f80"*/
   --lwt-toolbar-field-highlight-text: #dedede !important;        /*"toolbar_field_highlight_text": "#eaeaea"*/
   --lwt-tab-text: #dddddd !important;                            /*"tab_text": "#ffffff"*/
-  --lwt-selected-tab-background-color: #131118 !important;       /*"tab_selected":"#363540"*/
+  --lwt-selected-tab-background-color: #1f1726 !important;       /*"tab_selected":"#363540"*/
   --lwt-background-tab-separator-color: #0a090c !important;      /*"tab_background_separator": "#54575f"*/
   --toolbar-bgcolor: #1f1726 !important;                         /*"toolbar":"#131118", "Color de la toolbar"*/
   --toolbar-color: #392b45 !important;                           /*"toolbar_field":"#1a1b25"*/
@@ -32,6 +32,7 @@
   --panel-separator-zap-gradient: linear-gradient(to right, rgb(152, 1, 74,0.3), #ff80bd , rgb(178, 1, 86,0.3)) !important;
   --toolbarbutton-inner-padding: 5px !important;
   --proton-tab-block-margin: 2px 3px !important;
+  --tab-block-margin: 2px 3px !important;
   --tab-min-height:  27px !important;
   --tabs-shadow-size: 0px !important;
   --tab-border-radius: 3px !important;
@@ -92,7 +93,7 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 .tab-context-line{-moz-box-ordinal-group: 2 !important; opacity: 1 !important;transition: none !important;}
 
 /*Label de medios "Reproduciendo" modifiado*/
-.tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important; margin-top:-2px !important; color:#bb99ff !important;
+.tab-secondary-label:is([soundplaying], [pictureinpicture]) {display: -moz-box !important; margin-top:-4px !important; margin-bottom: 2px !important; color:#bb99ff !important;
  font-weight: bold !important;  text-shadow: 0px 0px 3px #000000 !important;}
 .tab-secondary-label:is([muted], [activemedia-blocked]) {display: none}
 
@@ -156,6 +157,16 @@ menupopup > menuitem, menupopup > menu{ padding-block: 0.3em !important;}
 	transform-origin: center center;  opacity: 1 !important;}
 .tab-background[selected="true"]::after {	transform: scale(1, 1);}
 
-/*Brillo de pestaña activa*/
-.tab-content[selected="true"] {background-color:color-mix(in srgb, #ff99eb 10%, transparent) !important;
-  border-radius:0px !important; margin-top: 2px !important; margin-bottom: 3px !important;}
+/*Menú contextual*/
+  /* Menu items border and padding */
+menupopup > menuitem, menupopup > menu { border-radius: 4px !important; margin-left: 4px !important; margin-right: 4px !important;  
+  padding-inline-start: 0.5em !important}
+  /*borde izquierda y derecha del menú contextual*/
+menugroup > menuitem:first-child {padding-left: 4px !important;} 
+menugroup > menuitem:last-child { padding-right: 4px !important;}
+  /* context menu top buttons radius */
+menugroup > menuitem { border-radius: 4px !important; }
+menugroup > menuitem > hbox > image { border-radius: 4px !important;}
+menuseparator { border-top: 1px solid var(--panel-separator-color) !important; padding: 0 !important; margin-left: 4px !important; margin-right: 4px !important;}
+.menupopup-arrowscrollbox {background: var(--arrowpanel-background) !important; background-color:var(--arrowpanel-background) !important; color: var(--arrowpanel-color);
+  border: 1px solid var(--arrowpanel-border-color) !important}
